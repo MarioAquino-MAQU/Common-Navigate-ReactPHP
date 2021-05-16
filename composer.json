@@ -1,0 +1,9 @@
+{
+    "name": "easimaqu/common_navigate_react_php",
+    "type": "project",
+    "description": "Code-samples for my reading on IBM Navigate 2021",
+    "require": {
+        "react/event-loop": "^1.1.1",
+        "react/stream": "^1.1"
+    }
+}
