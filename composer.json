@@ -4,6 +4,13 @@
     "description": "Code-samples for my reading on IBM Navigate 2021",
     "require": {
         "react/event-loop": "^1.1.1",
-        "react/stream": "^1.1"
+        "react/stream": "^1.1",
+        "laravel/homestead": "^12.2",
+        "react/http": "^1.3",
+        "react/promise": "^2.8",
+        "react/socket": "^1.6",
+        "ext-json": "*",
+        "nesbot/carbon": "^2.48",
+        "vlucas/phpdotenv": "^5.3",
     }
 }
