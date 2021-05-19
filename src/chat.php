@@ -47,9 +47,9 @@ function limitingServer()
             $connection->write("Message delivered!\n");
         });
     });
-
+    echo "Listening on {$server->getAddress()}\n";
     $loop->run();
 }
 
 //socketServer();
-limitingServer();
+//limitingServer();
