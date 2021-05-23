@@ -13,19 +13,18 @@ function staticTimer()
 {
     $loop = Factory::create();
 
-    echo "Program started\n";
-
     // One-off timers
-    $loop->addTimer(2, function () {
-        echo "This is ran after 2 seconds\n";
+    $loop->addTimer(1, function () {
+        echo "This is ran after 1 seconds\n";
     });
 
-    $loop->addTimer(3, function() {
-        echo "This is ran after 3 seconds\n";
+    $loop->addTimer(2, function() {
+        echo "This is ran after 2 seconds\n";
     });
 
     $loop->run();
 }
+//staticTimer();
 
 /**
  * Execute something every X seconds
@@ -46,5 +45,4 @@ function periodicTimer()
 
 }
 
-//staticTimer();
-periodicTimer();
+//periodicTimer();

@@ -24,6 +24,7 @@ function inOutStream()
 
     $loop->run();
 }
+//inOutStream();
 
 function throughStream()
 {
@@ -40,5 +41,4 @@ function throughStream()
     $loop->run();
 }
 
-//inOutStream();
-throughStream();
+//throughStream();
