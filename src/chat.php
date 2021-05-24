@@ -29,6 +29,7 @@ function socketServer()
 
     $loop->run();
 }
+//socketServer();
 
 function limitingServer()
 {
@@ -41,15 +42,16 @@ function limitingServer()
         $connection->write("Welcome!\n");
 
         $connection->on('data', function($data) use ($connection, $limitingserver){
-            foreach ($limitingserver->getConnections() as $clients) {
-                $clients->write($data);
+            foreach ($limitingserver->getConnections() as $client) {
+                if($client->getRemoteAddress() !== $connection->getRemoteAddress()) {
+                    $client->write($data);
+                } else {
+                    $connection->write("Message delivered!\n");
+                }
             }
-            $connection->write("Message delivered!\n");
         });
     });
     echo "Listening on {$server->getAddress()}\n";
     $loop->run();
 }
-
-//socketServer();
-limitingServer();
+//limitingServer();
