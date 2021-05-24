@@ -13,13 +13,12 @@ function staticTimer()
 {
     $loop = Factory::create();
 
-    // One-off timers
-    $loop->addTimer(1, function () {
-        echo "This is ran after 1 seconds\n";
-    });
-
     $loop->addTimer(2, function() {
         echo "This is ran after 2 seconds\n";
+    });
+
+    $loop->addTimer(1, function () {
+        echo "This is ran after 1 seconds\n";
     });
 
     $loop->run();
